@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Asath K | ECE Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    color:#fff;
+    background:#0f172a;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(120deg,#3b82f6,#9333ea,#06b6d4);
+    animation:bgmove 10s infinite alternate;
+    z-index:-1;
+}
+@keyframes bgmove{
+    0%{filter:hue-rotate(0deg);}
+    100%{filter:hue-rotate(70deg);}
+}
+
+.glass{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    box-shadow:0 0 30px rgba(0,0,0,0.3);
+}
+
+header{
+    margin:30px auto;
+    max-width:1000px;
+    padding:40px;
+    text-align:center;
+    animation:fadeUp 1s ease;
+}
+
+header h1{
+    font-size:42px;
+    background:linear-gradient(to right,#38bdf8,#f472b6);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+header span{
+    display:block;
+    font-size:14px;
+    margin-top:4px;
+}
+
+nav{
+    max-width:1000px;
+    margin:20px auto;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#38bdf8;
+    transition:0.3s;
+}
+nav a:hover::after{width:100%;}
+
+section{
+    max-width:1000px;
+    margin:30px auto;
+    padding:40px;
+    animation:fadeUp 1s ease;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#e0f2fe;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill{
+    padding:20px;
+    text-align:center;
+    border-radius:14px;
+    background:rgba(255,255,255,0.15);
+    transition:0.4s;
+}
+.skill:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 0 25px #38bdf8;
+}
+
+.project{
+    background:rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:20px;
+    transition:0.4s;
+}
+.project:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px #9333ea;
+}
+
+.edu, .cert li{
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:15px;
+    list-style:none;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+}
+
+footer a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header class="glass">
+    <h1>ASATH K</h1>
+    <p>Electronics & Communication Engineering Student</p>
+    <span>📍 Nagapattinam, India</span>
+    <span>📞 +91 6369142689</span>
+    <span>📧 asathk2006@gmail.com</span>
+</header>
+
+<nav class="glass">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+</nav>
+
+<section id="about" class="glass">
+    <h2>About Me</h2>
+    <p>
+        Electronics and Communication Engineering student with a strong interest
+        in hardware development, embedded systems, and IoT-based solutions.
+    </p>
+</section>
+
+<!-- UPDATED SKILLS -->
+<section id="skills" class="glass">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <div class="skill">C Programming</div>
+        <div class="skill">Python (Data Structures)</div>
+        <div class="skill">Embedded Systems</div>
+        <div class="skill">ESP32 & Arduino</div>
+        <div class="skill">STM32 Microcontrollers</div>
+        <div class="skill">Circuit Design</div>
+        <div class="skill">Hardware Debugging</div>
+        <div class="skill">Version Control (Git)</div>
+        <div class="skill">Project Management</div>
+    </div>
+</section>
+
+<section id="projects" class="glass">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Home Automation IoT</h3>
+        <p>ESP32-based wireless home automation system.</p>
+    </div>
+    <div class="project">
+        <h3>Manual Garbage Collector (Robotic Arm)</h3>
+        <p>Mobile-controlled robotic arm using ESP32 and servo motors.</p>
+    </div>
+</section>
+
+<section id="education" class="glass">
+    <h2>Education</h2>
+    <div class="edu">
+        <h3>B.E – Electronics & Communication</h3>
+        <p>Karpagam College of Engineering (2023–2027)</p>
+    </div>
+    <div class="edu">
+        <h3>Higher Secondary</h3>
+        <p>Government Higher Secondary School (2022–2023)</p>
+    </div>
+</section>
+
+<section id="certifications" class="glass">
+    <h2>Certifications</h2>
+    <ul>
+        <li class="cert">NPTEL – Industry 4.0 & IIoT</li>
+        <li class="cert">VLSI Basics – L&T EduTech</li>
+    </ul>
+</section>
+
+<footer class="glass">
+    <p>© 2026 Asath K</p>
+    <a href="https://www.linkedin.com/in/asathk2006" target="_blank">LinkedIn</a>
+</footer>
+
+</body>
+</html>
